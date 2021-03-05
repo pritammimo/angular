@@ -1,0 +1,8 @@
+<app-servers ></app-servers>
+<div class="container">
+
+    <p>this is a sub compoonent of app</p>
+</div>
+<!--ngstyle binding and ngclass binding-->
+<p [ngStyle]="{backgroundColor:getColor()}"
+[ngClass]="{'online': serverstatus==='online'}">{{'server'}} with Id {{serverId}} is {{getServerStatus()}}</p> 
