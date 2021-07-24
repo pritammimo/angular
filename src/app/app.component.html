@@ -16,9 +16,14 @@
     <input type="checkbox"/>
 </div>
 <div>
-    <button>Generate</button>
+    <!-- event binding -->
+    <button (click)="onButtonClick()">Generate</button>
 </div>
 <div>
     <label>Your password</label>
-    <input/>
+    <!-- Poperty Binding -->
+    <input [value]="password"/>
 </div>
+<!-- Interpolation Synatax -->
+<div>{{password}}</div>
+<div>{{getName()}}</div>
