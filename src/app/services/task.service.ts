@@ -11,7 +11,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TaskService {
-   private apiUrl="https://5000-rose-wolverine-qyrfv1n1.ws-us13.gitpod.io/tasks"
+   private apiUrl="https://5000-lavender-dolphin-64tgkwnf.ws-us14.gitpod.io/tasks"
   constructor(private http: HttpClient) { }
   getTasks():Observable<Task[]>{
     return this.http.get<Task[]>(this.apiUrl);
