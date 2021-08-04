@@ -11,7 +11,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TaskService {
-   private apiUrl="https://5000-lavender-dolphin-64tgkwnf.ws-us14.gitpod.io/tasks"
+   private apiUrl="https://5000-gold-gibbon-5oqc0nam.ws-us14.gitpod.io/tasks"
   constructor(private http: HttpClient) { }
   getTasks():Observable<Task[]>{
     return this.http.get<Task[]>(this.apiUrl);
@@ -23,5 +23,8 @@ export class TaskService {
 updateTaskReminder(task: Task): Observable<Task> {
   const url = `${this.apiUrl}/${task.id}`;
   return this.http.put<Task>(url, task, httpOptions);
+}
+addTask(task: Task): Observable<Task> {
+  return this.http.post<Task>(this.apiUrl, task, httpOptions);
 }
 }
